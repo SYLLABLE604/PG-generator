@@ -1,0 +1,1 @@
+This flowchart describes the process of PQ integration into a load. Initially, the electrical power passes through a 10kV switch at the substation into the medium voltage ring main unit. Next, the power is further distributed through the switching station, and finally, it enters the distribution substation or overhead transformer for use by the load.

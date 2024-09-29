@@ -1,0 +1,100 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code formate:
+1: Based on the type of bus, load bus is connected to load, generator is connected to generator
+  Example:
+    PV bus description:
+      node {bus_number} is PV bus.
+    Code:
+      gz.node('{bus_number}','',{'xlabel':'bus {bus_number}'})
+      gz.node('{generator_number}','G',{'shape':'circle','height':'0.2','style':''})
+      gz.edge('{generator_number}','{bus_number}')
+
+    PQ bus desccription:
+      node {bus_number} is PQ bus.
+    Code:
+      gz.node('{bus_number}','',{'xlabel':'bus {bus_number}'})
+      gz.node('generator_number','Load',{'shape':'rectangle','height':'0.05','style':''})
+      gz.edge('{generator_number}','{bus_number}')
+
+2: Line code formate:
+  Example:
+    Description:
+      bus {bus_number1} is connected to bus {bus_number2}.
+    Code:
+      gz.edge('{bus_number1}','{bus_number2}')
+
+3: You task is to output code based on previous instruction and grid description in part 5, then output code in the following formate:
+  Description:
+    This is a power grid include 19 buses, which have 1 transmission grid and 3 distribution grids
+    transmission grid include 3 buses, ranged from 1 to 3.
+    bus 1 is PV bus.
+    bus 2 is PQ bus.
+    bus 3 is slack bus.
+    bus 1 is connected to bus 2.
+    bus 2 is connected to bus 3.
+    bus 3 is connected to bus 1.
+
+    distribution grid include 4 buses, ranged from 4 to 7.
+    bus 4 is PV bus.
+    bus 5 is PV bus.
+    bus 6 is PQ bus.
+    bus 7 is slack bus.
+    bus 4 is connected to bus 7.
+    bus 4 is connected to bus 5.
+    bus 5 is connected to bus 6.
+    bus 6 is connected to bus 7.
+    distribution grid include 3 buses, ranged from 8 to 10.
+    bus 8 is PV bus.
+    bus 9 is PQ bus.
+    bus 10 is slack bus.
+    bus 8 is connected to bus 9.
+    bus 8 is connected to bus 10.
+    bus 9 is connected to bus 10.
+    distribution grid include 4 buses, ranged from 11 to 14.
+    bus 11 is PV bus.
+    bus 12 is PQ bus.
+    bus 13 is PQ bus.
+    bus 14 is slack bus.
+    bus 11 is connected to bus 13.
+    bus 13 is connected to bus 12.
+    bus 13 is connected to bus 14.
+    bus 12 is connected to bus 14.
+
+  Code (output code in the following formate):
+    #tansmission grid define
+    gz.node('1','',{'color':'red','fontcolor':'red','xlabel':'bus 1'})
+    gz.node('2','',{'color':'red','fontcolor':'red','xlabel':'bus 2'})
+    gz.node('3','',{'color':'red','fontcolor':'red','xlabel':'bus 3'})
+    gz.edge('1','2','',{'color':'red'})
+    gz.edge('2','3','',{'color':'red'})
+    gz.edge('3','1','',{'color':'red'})
+
+    #destribution grid 1 define
+    gz.node('4','',{'color':'black','fontcolor':'black','xlabel':'bus 4'})
+    gz.node('5','',{'color':'black','fontcolor':'black','xlabel':'bus 5'})
+    gz.node('6','',{'color':'black','fontcolor':'black','xlabel':'bus 6'})
+    gz.node('7','',{'color':'black','fontcolor':'black','xlabel':'bus 7'})
+    gz.edge('4','7','',{'color':'black'})
+    gz.edge('4','5','',{'color':'black'})
+    gz.edge('5','6','',{'color':'black'})
+    gz.edge('6','7','',{'color':'black'})
+
+    #destribution grid 2 define
+    gz.node('8','',{'color':'black','fontcolor':'black','xlabel':'bus 8'})
+    gz.node('9','',{'color':'black','fontcolor':'black','xlabel':'bus 9'})
+    gz.node('10','',{'color':'black','fontcolor':'black','xlabel':'bus 10'})
+    gz.edge('8','9','',{'color':'black'})
+    gz.edge('8','10','',{'color':'black'})
+    gz.edge('9','10','',{'color':'black'})
+
+    #destribution grid 3 define
+    gz.node('11','',{'color':'black','fontcolor':'black','xlabel':'bus 11'})
+    gz.node('12','',{'color':'black','fontcolor':'black','xlabel':'bus 12'})
+    gz.node('13','',{'color':'black','fontcolor':'black','xlabel':'bus 13'})
+    gz.node('14','',{'color':'black','fontcolor':'black','xlabel':'bus 14'})
+    gz.edge('11','13','',{'color':'black'})
+    gz.edge('13','12','',{'color':'black'})
+    gz.edge('13','14','',{'color':'black'})
+    gz.edge('12','14','',{'color':'black'})
+
+4:description
+  

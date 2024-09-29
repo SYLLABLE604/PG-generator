@@ -1,0 +1,28 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code formate:
+1: Line code formate:
+  Example:
+    Description:
+      bus {bus_number1} is connected to bus {bus_number2}.
+    Code:
+      gz.edge('{bus_number1}','{bus_number2}')
+
+2: You task is to output code based on previous instruction and grid description in part 4, then output code in the following formate:
+  Description:
+    bus 4 is connected to bus 3.
+    bus 4 is connected to bus 5.
+    bus 5 is connected to bus 6.
+    bus 6 is connected to bus 7.
+    bus 8 is connected to bus 9.
+    bus 8 is connected to bus 10.
+    bus 9 is connected to bus 10.
+
+  Code (output code in the following formate):
+    gz.edge('4','3','',{'color':'black'})
+    gz.edge('4','5','',{'color':'black'})
+    gz.edge('5','6','',{'color':'black'})
+    gz.edge('6','7','',{'color':'black'})
+    gz.edge('8','9','',{'color':'black'})
+    gz.edge('8','10','',{'color':'black'})
+    gz.edge('9','10','',{'color':'black'})
+
+3: Transform following description into code,

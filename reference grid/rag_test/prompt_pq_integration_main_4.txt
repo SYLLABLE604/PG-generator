@@ -1,0 +1,20 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code format:
+Example:
+    subgraph cluster3 ["<font color='purple'>PQ Integration into Main Grid</font>"]
+        direction TB
+        lightning_arrester["Lightning Arrester"]
+        hv_circuit_breaker["High Voltage Circuit Breaker"]
+        isolating_switch["Isolating Switch"]
+        reactor["Reactor"]
+        transformer_3["Transformer (HV to LV)"]
+        capacitor["Capacitor (Reactive Power Compensation)"]
+        lightning_arrester --> hv_circuit_breaker
+        hv_circuit_breaker --> isolating_switch
+        isolating_switch --> reactor
+        reactor --> transformer_3
+        transformer_3 --> capacitor
+
+        %% Add Color Legend
+        legend3[" "]
+        style legend3 fill:purple,stroke:none
+    end

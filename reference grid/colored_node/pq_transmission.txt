@@ -1,0 +1,5 @@
+Only change the node's color and keep its format unchanged. PQ transmission grid includes the following buses: 
+bus 2 is PQ bus. this node's color pq_transmission bus must be purple. 
+bus 3 is PQ bus. this node's color pq_transmission bus must be purple. 
+bus 4 is PQ bus. this node's color pq_transmission bus must be purple. 
+bus 5 is PQ bus. this node's color pq_transmission bus must be purple. 

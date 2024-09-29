@@ -1,0 +1,78 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code formate:
+1: Node code formate
+  Example:
+    PV bus description:
+      node {bus_number} is PV bus.
+    Code:
+      gz.node('{bus_number}','',{'xlabel':'bus {bus_number}'})
+      gz.node('1','',{'color':'black','fontcolor':'black','xlabel':'bus 1'})
+
+    PQ bus desccription:
+      node {bus_number} is PQ bus.
+    Code:
+      gz.node('{bus_number}','',{'xlabel':'bus {bus_number}'})
+
+    slack bus desccription:
+      node {bus_number} is slack bus.
+    Code:
+      gz.node('{bus_number}','',{'xlabel':'bus {bus_number}'})
+
+2: Line code formate:
+  Example:
+    Description:
+      bus {bus_number1} is connected to bus {bus_number2}.
+    Code:
+      gz.edge('{bus_number1}','{bus_number2}')
+      
+3: You task is to output code based on previous instruction and grid description in part 4, then output code in the following formate:
+  Description:
+    This is a distribution power grid include 10 buses.
+    bus 1 is PV bus.
+    bus 2 is slack bus.
+    bus 3 is PQ bus.
+    bus 4 is PQ bus.
+    bus 5 is PQ bus.
+    bus 6 is PQ bus.
+    bus 7 is PQ bus.
+    bus 8 is PQ bus.
+    bus 9 is PQ bus.
+    bus 10 is PQ bus.
+
+    bus 1 is connected to bus 4.
+    bus 2 is connected to bus 3.
+    bus 3 is connected to bus 1.
+    bus 4 is connected to bus 3.
+    bus 4 is connected to bus 5.
+    bus 5 is connected to bus 6.
+    bus 6 is connected to bus 7.
+    bus 8 is connected to bus 9.
+    bus 8 is connected to bus 10.
+    bus 9 is connected to bus 10.
+
+
+  Code (output code in the following formate):
+    #node description
+    gz.node('1','',{'color':'black','fontcolor':'black','xlabel':'bus 1'})
+    gz.node('2','',{'color':'black','fontcolor':'black','xlabel':'bus 2'})
+    gz.node('3','',{'color':'black','fontcolor':'black','xlabel':'bus 3'})
+    gz.node('4','',{'color':'black','fontcolor':'black','xlabel':'bus 4'})
+    gz.node('5','',{'color':'black','fontcolor':'black','xlabel':'bus 5'})
+    gz.node('6','',{'color':'black','fontcolor':'black','xlabel':'bus 6'})
+    gz.node('7','',{'color':'black','fontcolor':'black','xlabel':'bus 7'})
+    gz.node('8','',{'color':'black','fontcolor':'black','xlabel':'bus 8'})
+    gz.node('9','',{'color':'black','fontcolor':'black','xlabel':'bus 9'})
+    gz.node('10','',{'color':'black','fontcolor':'black','xlabel':'bus 10'})
+    
+    #edge description
+    gz.edge('1','2','',{'color':'black'})
+    gz.edge('2','5','',{'color':'black'})
+    gz.edge('3','1','',{'color':'black'})
+    gz.edge('4','7','',{'color':'black'})
+    gz.edge('4','5','',{'color':'black'})
+    gz.edge('5','6','',{'color':'black'})
+    gz.edge('6','7','',{'color':'black'})
+    gz.edge('8','9','',{'color':'black'})
+    gz.edge('8','1','',{'color':'black'})
+    gz.edge('9','10','',{'color':'black'})
+
+4: Transform following description into code

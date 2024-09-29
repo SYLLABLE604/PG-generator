@@ -1,0 +1,18 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code format:
+Example:
+    subgraph cluster2 ["<font color='red'>PQ Distribution Integration Process</font>"]
+        direction TB
+        substation_switch["10kV Switch at Substation"]
+        ring_main_unit["Medium Voltage Ring Main Unit"]
+        switching_station["Switching Station"]
+        distribution_substation["Distribution Substation or Overhead Transformer"]
+        load["Load"]
+        substation_switch --> ring_main_unit
+        ring_main_unit --> switching_station
+        switching_station --> distribution_substation
+        distribution_substation --> load
+
+        %% Add Color Legend
+        legend2[" "]
+        style legend2 fill:red,stroke:none
+    end

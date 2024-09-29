@@ -1,0 +1,21 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code format:
+Example:
+
+subgraph cluster1 ["<font color='blue'>PV (or Thermal) Power Integration</font>"]
+        direction TB
+        generator_1["Generator"]
+        transformer_1["Step-up Transformer"]
+        rectifier_1["Rectifier (AC to DC)"]
+        dc_line_1["DC Transmission Line"]
+        compensators_1["Reactive Power Compensators"]
+        circuit_breakers["Circuit Breakers and Switches"]
+        generator_1 --> transformer_1
+        transformer_1 --> rectifier_1
+        rectifier_1 --> dc_line_1
+        dc_line_1 --> compensators_1
+        compensators_1 --> circuit_breakers
+
+        %% Add Color Legend
+        legend1[" "]
+        style legend1 fill:blue,stroke:none
+    end

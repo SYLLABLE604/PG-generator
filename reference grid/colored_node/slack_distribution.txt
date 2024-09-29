@@ -1,0 +1,5 @@
+Slack distribution grids include the following buses:
+bus 6 in distribution grid 1. this node's color pv_distribution bus must be blue.
+bus 18 in distribution grid 2. this node's color pv_distribution bus must be blue.
+bus 26 in distribution grid 3. this node's color pv_distribution bus must be blue.
+bus 37 in distribution grid 4. this node's color pv_distribution bus must be blue.

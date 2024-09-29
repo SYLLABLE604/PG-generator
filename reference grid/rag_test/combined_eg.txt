@@ -1,0 +1,79 @@
+graph TD
+    %% First Row
+    subgraph cluster0 ["<font color='green'>PV Main Integration</font>"]
+        direction TB
+        generator["Generator"]
+        transformer["Transformer"]
+        rectifier["Rectifier"]
+        dc_line["DC Line"]
+        compensators["Compensators"]
+        generator --> transformer
+        transformer --> rectifier
+        rectifier --> dc_line
+        dc_line --> compensators
+
+        %% Add Color Legend
+        legend0[" "]
+        style legend0 fill:green,stroke:none
+    end
+
+    subgraph spacer1 [" "]
+        direction TB
+        style spacer1 fill:none,stroke:none
+    end
+
+    subgraph cluster1 ["<font color='blue'>PV (or Thermal) Power Integration</font>"]
+        direction TB
+        generator_1["Generator"]
+        transformer_1["Step-up Transformer"]
+        rectifier_1["Rectifier (AC to DC)"]
+        dc_line_1["DC Transmission Line"]
+        compensators_1["Reactive Power Compensators"]
+        circuit_breakers["Circuit Breakers and Switches"]
+        generator_1 --> transformer_1
+        transformer_1 --> rectifier_1
+        rectifier_1 --> dc_line_1
+        dc_line_1 --> compensators_1
+        compensators_1 --> circuit_breakers
+
+        %% Add Color Legend
+        legend1[" "]
+        style legend1 fill:blue,stroke:none
+    end
+
+    %% Second Row
+    subgraph cluster2 ["<font color='red'>PQ Distribution Integration Process</font>"]
+        direction TB
+        substation_switch["10kV Switch at Substation"]
+        ring_main_unit["Medium Voltage Ring Main Unit"]
+        switching_station["Switching Station"]
+        distribution_substation["Distribution Substation or Overhead Transformer"]
+        load["Load"]
+        substation_switch --> ring_main_unit
+        ring_main_unit --> switching_station
+        switching_station --> distribution_substation
+        distribution_substation --> load
+
+        %% Add Color Legend
+        legend2[" "]
+        style legend2 fill:red,stroke:none
+    end
+
+    subgraph cluster3 ["<font color='purple'>PQ Integration into Main Grid</font>"]
+        direction TB
+        lightning_arrester["Lightning Arrester"]
+        hv_circuit_breaker["High Voltage Circuit Breaker"]
+        isolating_switch["Isolating Switch"]
+        reactor["Reactor"]
+        transformer_3["Transformer (HV to LV)"]
+        capacitor["Capacitor (Reactive Power Compensation)"]
+        lightning_arrester --> hv_circuit_breaker
+        hv_circuit_breaker --> isolating_switch
+        isolating_switch --> reactor
+        reactor --> transformer_3
+        transformer_3 --> capacitor
+
+        %% Add Color Legend
+        legend3[" "]
+        style legend3 fill:purple,stroke:none
+    end

@@ -1,0 +1,2 @@
+Only change the node's color and keep its format unchanged. PV distribution grids include the following buses:
+bus 50 in distribution grid 3. this node's color pv_distribution bus must be blue. 

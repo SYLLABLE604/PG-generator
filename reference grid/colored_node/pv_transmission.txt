@@ -1,0 +1,2 @@
+Only change the node's color and keep its format unchanged. PV transmission grid includes the following buses:
+bus 6 is PV bus. The color of this node pv_transmission bus should be in grey. 

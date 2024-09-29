@@ -1,0 +1,2 @@
+Slack transmission grid includes the following buses:
+bus 1 is slack bus. this node's color pv_transmission bus must be green.

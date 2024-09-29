@@ -1,0 +1,19 @@
+You are an expert in Python, you need output the Python code after learning the instruction and example pairs, output result in code format:
+Example:
+
+    subgraph cluster0 ["<font color='green'>PV Main Integration</font>"]
+        direction TB
+        generator["Generator"]
+        transformer["Transformer"]
+        rectifier["Rectifier"]
+        dc_line["DC Line"]
+        compensators["Compensators"]
+        generator --> transformer
+        transformer --> rectifier
+        rectifier --> dc_line
+        dc_line --> compensators
+
+        %% Add Color Legend
+        legend0[" "]
+        style legend0 fill:green,stroke:none
+    end
