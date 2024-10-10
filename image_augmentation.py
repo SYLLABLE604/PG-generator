@@ -17,9 +17,6 @@ import logging
 import re
 from pathlib import Path
 
-os.environ['http_proxy'] = "http://10.60.2.25:3128"
-os.environ['https_proxy'] = "http://10.60.2.25:3128"
-
 def clean_code_block(text):
     text = text.strip()
 
@@ -92,7 +89,7 @@ def load_txt_files(directory):
 def main(edge_index_path, node_index_path, python_path):
     # 设置API密钥和代理
     
-    api_key = "AIzaSyDvDoaTUaCQpRYyEE-wGsyeEi3vaVO8xUo"
+    api_key = "replace with your key"
 
     txt_data_dir = Path(__file__).parent / "reference grid" / "txt"
     TXT_data = load_txt_files(txt_data_dir)
