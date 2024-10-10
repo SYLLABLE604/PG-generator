@@ -7,11 +7,9 @@ from Tool import read_file,output_check
 import google.generativeai as genai
 import os
 
-os.environ['http_proxy']="http://10.60.2.25:3128"
-os.environ['https_proxy']="http://10.60.2.25:3128"
 
 def gemini_prompt(description,type):  #后面还可以加参数，设置不同的prompt模板,1是没有分批，2是分批的头部，3是分批的中部，4是分批的尾部
-    genai.configure(api_key='AIzaSyDvDoaTUaCQpRYyEE-wGsyeEi3vaVO8xUo')
+    genai.configure(api_key='replace with your key')
     model = genai.GenerativeModel(model_name="gemini-pro")
 
     if type == 1:
